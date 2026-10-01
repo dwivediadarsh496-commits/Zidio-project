@@ -3,6 +3,8 @@ import { z } from "zod";
 import prisma from "@/lib/db";
 import { requireAuthUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 const UpdateWorkspaceSchema = z.object({
   name: z.string().min(2, "Workspace name must be at least 2 characters"),
 });

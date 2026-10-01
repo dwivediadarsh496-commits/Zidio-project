@@ -5,6 +5,8 @@ import { requireAuthUser } from "@/lib/auth";
 import { classifyFeedback } from "@/lib/ai";
 import { generateEmbedding } from "@/lib/search";
 
+export const dynamic = "force-dynamic";
+
 const ImportRequestSchema = z.object({
   type: z.enum(["csv", "simulated"]),
   // For CSV upload:

@@ -4,6 +4,8 @@ import { requireAuthUser } from "@/lib/auth";
 import { classifyFeedback } from "@/lib/ai";
 import { generateEmbedding } from "@/lib/search";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(
   req: Request,
   { params }: { params: Promise<{ id: string }> }

@@ -5,6 +5,8 @@ import { requireAuthUser } from "@/lib/auth";
 import { generateEmbedding, rankFeedbackBySimilarity } from "@/lib/search";
 import { askLoopGrounded } from "@/lib/ai";
 
+export const dynamic = "force-dynamic";
+
 const AskSchema = z.object({
   question: z.string().min(3, "Question must be at least 3 characters"),
 });

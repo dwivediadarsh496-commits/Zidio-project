@@ -5,6 +5,8 @@ import { requireAuthUser } from "@/lib/auth";
 import { classifyFeedback } from "@/lib/ai";
 import { generateEmbedding } from "@/lib/search";
 
+export const dynamic = "force-dynamic";
+
 const FeedbackCreateSchema = z.object({
   content: z.string().min(3, "Feedback content must be at least 3 characters"),
   channel: z.string().min(2, "Channel is required"),

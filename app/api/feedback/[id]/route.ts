@@ -3,6 +3,8 @@ import { z } from "zod";
 import prisma from "@/lib/db";
 import { requireAuthUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 const UpdateFeedbackSchema = z.object({
   status: z.enum(["NEW", "REVIEWED", "ACTIONED"]).optional(),
   customerLabel: z.string().optional(),

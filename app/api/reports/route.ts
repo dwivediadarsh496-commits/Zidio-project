@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/db";
 import { requireAuthUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 // GET /api/reports - List saved VoC reports
 export async function GET() {
   try {

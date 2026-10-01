@@ -4,6 +4,8 @@ import bcrypt from "bcryptjs";
 import prisma from "@/lib/db";
 import { requireAuthUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 const CreateMemberSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),

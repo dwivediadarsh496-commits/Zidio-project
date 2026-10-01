@@ -4,6 +4,8 @@ import prisma from "@/lib/db";
 import { requireAuthUser } from "@/lib/auth";
 import { generateVocReportContent } from "@/lib/ai";
 
+export const dynamic = "force-dynamic";
+
 const GenerateReportSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters").optional(),
   period: z.enum(["7d", "30d", "custom"]),

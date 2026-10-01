@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/db";
 import { requireAuthUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 // GET /api/themes/trends - AI Feature 2: Theme Clustering & Trend Detection
 export async function GET(req: Request) {
   try {
