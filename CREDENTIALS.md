@@ -30,7 +30,7 @@ On the **Login Page** (`http://localhost:3000/login`):
 | **`NEXTAUTH_SECRET`** | `loop-super-secret-jwt-key-2026-production-grade` | `.env` | JWT session signing secret |
 | **`NEXTAUTH_URL`** | `http://localhost:3000` | `.env` | Base app callback URL |
 | **`DATABASE_URL`** | `file:./dev.db` | `.env` | Local SQLite database file |
-| **`ANTHROPIC_API_KEY`** | `""` (Optional) | `.env` | Claude Sonnet API key (fallback smart NLP is active if left empty) |
+| **`ANTHROPIC_API_KEY`** | `sk-ant-api03-loop-demo-preview-key-2026` | `.env` | Anthropic Claude API key format. *(Note: Real live keys are obtained from console.anthropic.com; LOOP's built-in NLP fallback handles all AI features seamlessly with or without an active key)* |
 
 ---
 
