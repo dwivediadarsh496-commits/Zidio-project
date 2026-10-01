@@ -17,18 +17,19 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const [isCsvModalOpen, setIsCsvModalOpen] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
 
-  if (status === "loading") {
+  React.useEffect(() => {
+    if (status === "unauthenticated") {
+      router.replace("/login");
+    }
+  }, [status, router]);
+
+  if (status === "loading" || status === "unauthenticated") {
     return (
       <div className="min-h-screen bg-[#0b0f19] flex flex-col items-center justify-center text-slate-400 gap-3">
         <Loader2 className="w-8 h-8 text-indigo-500 animate-spin" />
         <p className="text-sm font-medium">Authenticating LOOP workspace...</p>
       </div>
     );
-  }
-
-  if (status === "unauthenticated") {
-    router.replace("/login");
-    return null;
   }
 
   const triggerRefresh = () => {
