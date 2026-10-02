@@ -23,8 +23,10 @@ function resolveDatabaseUrl(): string {
 
     if (!fs.existsSync(tmpDbPath)) {
       const candidates = [
+        path.join(process.cwd(), "public", "dev.db"),
         path.join(process.cwd(), "prisma", "dev.db"),
         path.join(process.cwd(), "dev.db"),
+        path.resolve("./public/dev.db"),
         path.resolve("./prisma/dev.db"),
         path.resolve("./dev.db"),
       ];
