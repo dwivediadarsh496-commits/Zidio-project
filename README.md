@@ -1,8 +1,6 @@
 # Project LOOP — AI Customer-Feedback Intelligence Platform
 
-> **Tagline**: *LOOP — Close the loop on customer feedback.*  
-> **Version**: 1.0 Corporate-Grade Web Application  
-> **Evaluation Track**: Web Development (50 Marks)
+>
 
 ---
 
